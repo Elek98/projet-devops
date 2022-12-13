@@ -16,12 +16,11 @@ import tn.esprit.spring.entities.Voyageur;
 import java.util.ArrayList;
 import java.util.List;
 
-import tn.esprit.spring.entities.Voyageur;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.text.ParseException;
+
 
 import org.springframework.scheduling.annotation.Scheduled;
 
@@ -30,7 +29,7 @@ public class TrainServiceImpl implements ITrainService {
 
 
     @Autowired
-    VoyageurRepository VoyageurRepository;
+    VoyageurRepository voyageurRepository;
 
 
     @Autowired
@@ -96,7 +95,7 @@ public class TrainServiceImpl implements ITrainService {
 
 
         System.out.println("taille test");
-        Voyageur c = VoyageurRepository.findById(idVoyageur).get();
+        Voyageur c = voyageurRepository.findById(idVoyageur).get();
         List<Voyage> lesvoyages = new ArrayList<>();
         lesvoyages = voyageRepository.RechercheVoyage(nomGareDepart, nomGareDepart, heureDepart);
         System.out.println("taille" + lesvoyages.size());
