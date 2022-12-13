@@ -58,6 +58,7 @@ public class TrainServiceImpl implements ITrainService {
                 occ = occ + 1;
                 System.out.println("cpt " + cpt);
             } else {
+            	occ = 1;
 
             }
         }
