@@ -2,8 +2,8 @@ stages {
     stage('Checkout GIT') {
         steps {
             echo 'Pulling .....';
-            git branch : 'youssef-back',
-            url : 'https://github.com/farouk-hajjej/Devops-Projet-5SE1.git'
+            git branch : 'ahmed_branch',
+            url : 'https://github.com/Elek98/projet-devops.git'
         }
                           }
         
