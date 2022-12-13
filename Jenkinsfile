@@ -21,16 +21,17 @@ stages {
                 sh  'mvn compile'
                  }
                             }
-     stage('MVN PACKAGE'){
-            steps{
-                sh  'mvn package'
-                      }
+     
                                   }
           stage('MVN SONARQUBE'){
                          steps{
                                 sh  'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=ahmed2077'
                          }
                    }
+    stage('MVN PACKAGE'){
+            steps{
+                sh  'mvn package'
+                      }
                    
 
  }
